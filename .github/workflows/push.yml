@@ -9,7 +9,7 @@ on:
       - main
 
   # Allows you to run this workflow manually from the Actions tab
-  my_workflow_run_now:
+  workflow_dispatch:
 
 jobs:
   build:
