@@ -192,12 +192,14 @@ bool parseCapabilitiesArray(const uint8_t numCaps, uint8_t *bestIndex, uint16_t 
         if (ideal_voltage_mv > max_voltage) {
           ideal_voltage_mv = max_voltage; // constrain to what this PDO offers
         }
+        /*
         if (ideal_voltage_mv > 20000) {
           ideal_voltage_mv = 20000; // Limit to 20V as some advertise 21 but are not stable at 21
         }
         if (ideal_voltage_mv > (USB_PD_VMAX * 1000)) {
           ideal_voltage_mv = (USB_PD_VMAX * 1000); // constrain to model max voltage safe to select
         }
+        */
         if (ideal_voltage_mv > *bestVoltage) {
           *bestIndex   = i;
           *bestVoltage = ideal_voltage_mv;
